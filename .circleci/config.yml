@@ -10,7 +10,7 @@ executors:
       - image: circleci/node:13.8.0
   python:
     docker:
-      - image: python:3.6.9-stretch
+      - image: python:3.8.5-stretch
   aws:
     docker: 
       - image: amazon/aws-cli
