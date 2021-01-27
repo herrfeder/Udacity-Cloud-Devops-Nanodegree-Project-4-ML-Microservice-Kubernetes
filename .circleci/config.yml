@@ -38,6 +38,7 @@ jobs:
       - run:
           name: run lint
           command: |
+            sudo apt install pylint
             . venv/bin/activate
             make lint 
 
