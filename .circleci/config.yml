@@ -5,21 +5,13 @@
 version: 2.1
 
 executors:
-  node: 
-    docker:
-      - image: circleci/node:13.8.0
   python:
     docker:
-      - image: python:3.8.5-stretch
-  aws:
-    docker: 
-      - image: amazon/aws-cli
-
+      - image: python:3.7.9-buster
 
 jobs:
   build:
     executor: python
-    working_directory: ~/repo
 
     steps:
       - checkout
@@ -48,3 +40,8 @@ jobs:
           command: |
             . venv/bin/activate
             make lint 
+
+workflows:
+  default:
+    jobs:
+      - build
