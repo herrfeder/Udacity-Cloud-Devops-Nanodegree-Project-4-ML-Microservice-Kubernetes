@@ -1,1 +1,9 @@
-<paste log output from Kubernetes-mediated prediction, here>
+Error from server (AlreadyExists): pods "udacitydevops" already exists
+NAME                                   READY   STATUS    RESTARTS   AGE
+flaskskearlndemo                       1/1     Running   1          3d2h
+kubernetes-bootcamp-57978f5f5d-chwpv   1/1     Running   1          3d3h
+udacitydevops                          1/1     Running   0          8m52s
+Forwarding from 127.0.0.1:10000 -> 10000
+Forwarding from [::1]:10000 -> 10000
+Handling connection for 10000
+Handling connection for 10000
