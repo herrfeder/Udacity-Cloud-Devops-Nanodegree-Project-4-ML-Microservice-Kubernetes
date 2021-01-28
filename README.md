@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://circleci.com/gh/herrfeder/Udacity-Cloud-Devops-Nanodegree-Project-4-ML-Microservice-Kubernetes.svg?style=svg)](https://app.circleci.com/pipelines/github/herrfeder/Udacity-Cloud-Devops-Nanodegree-Project-4-ML-Microservice-Kubernetes/4/workflows/8a40e434-f945-4ea0-ba8d-216dcc285105)
 
 ## Project Overview
 
@@ -17,11 +17,27 @@ Your project goal is to operationalize this working, machine learning microservi
 * Deploy a container using Kubernetes and make a prediction
 * Upload a complete Github repo with CircleCI to indicate that your code has been tested
 
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
-
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
-
 ---
+
+## Included Files
+
+* [app.py](https://github.com/herrfeder/Udacity-Cloud-Devops-Nanodegree-Project-4-ML-Microservice-Kubernetes/blob/main/app.py):
+  * Flask app that provides API for prediction and speaks with sklearn model in the backend
+* [Makefile](https://github.com/herrfeder/Udacity-Cloud-Devops-Nanodegree-Project-4-ML-Microservice-Kubernetes/blob/main/Makefile)
+  * holds the commands to setup, install, test and lint the source code
+* [Dockerfile](https://github.com/herrfeder/Udacity-Cloud-Devops-Nanodegree-Project-4-ML-Microservice-Kubernetes/blob/main/Dockerfile):
+  * holds the container description for the runnable application
+* [requirements.txt](https://github.com/herrfeder/Udacity-Cloud-Devops-Nanodegree-Project-4-ML-Microservice-Kubernetes/blob/main/requirements.txt): 
+  * Python packets to install in the virtualenv
+* [run_docker.sh](https://github.com/herrfeder/Udacity-Cloud-Devops-Nanodegree-Project-4-ML-Microservice-Kubernetes/blob/main/run_docker.sh):
+  * Build and run Docker container with app.py
+* [upload_docker.sh](https://github.com/herrfeder/Udacity-Cloud-Devops-Nanodegree-Project-4-ML-Microservice-Kubernetes/blob/main/upload_docker.sh):
+  * Upload the successful Docker Image to DockerHub for easy use in Kubernetes Pod
+* [run_kubernetes.sh](https://github.com/herrfeder/Udacity-Cloud-Devops-Nanodegree-Project-4-ML-Microservice-Kubernetes/blob/main/run_kubernetes.sh):
+  * download DockerHub Image into local Kubernetes Pod
+* [make_prediction.sh](https://github.com/herrfeder/Udacity-Cloud-Devops-Nanodegree-Project-4-ML-Microservice-Kubernetes/blob/main/make_prediction.sh):
+  * Test the running application against an example REST-Requst
+
 
 ## Setup the Environment
 
@@ -34,9 +50,4 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
-### Kubernetes Steps
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
